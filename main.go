@@ -54,7 +54,7 @@ func main() {
 	configurationmanagement = append(configurationmanagement, ConfigurationManagement{ID: "2", Tool: "Puppet", LanguageBased: "Ruby", Company: &Company{Name: "None",Opensource: "YES", Certification: "RedHat Specialist Configuration Management"}})
 
         // Route Handlers / Endpoints
-	r.HandleFunc("/api/cms", getcms).Methods("GET")
+	r.HandleFunc("/api/cm", getcms).Methods("GET")
 	r.HandleFunc("/api/cm/{id}", getcm).Methods("GET")
 
 	log.Fatal(http.ListenAndServe(":8000", r))
